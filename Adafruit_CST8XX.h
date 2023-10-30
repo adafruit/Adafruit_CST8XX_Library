@@ -42,9 +42,16 @@
 #define CST816D_CHIPID 0xB6 //!< Chip selecting
 #define CST820_CHIPID 0xB7  //!< Chip selecting
 
-enum Events { PRESS = 0, RELEASE, TOUCHING, NONE };
+/// Events enumeration
+enum Events {
+  PRESS = 0, ///< Press Event Detected
+  RELEASE,   ///< Release Event Detected
+  TOUCHING,  ///< Touching Detected
+  NONE       ///< Not Touching Detected
+};
 
-const char *const events_name[] = {"PRESS", "RELEASE", "TOUCHING", "NONE"};
+const char *const events_name[] = {"PRESS", "RELEASE", "TOUCHING",
+                                   "NONE"}; //!< Event names to print
 
 /**************************************************************************/
 /*!

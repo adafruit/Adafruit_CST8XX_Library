@@ -218,7 +218,8 @@ TS_Point::TS_Point(int16_t _x, int16_t _y, int16_t _z, uint8_t _id,
 /**************************************************************************/
 /*!
     @brief  Simple == comparator for two TS_Point objects
-    @returns True if x, y and z are the same for both points, False otherwise.
+    @returns True if x, y, z, and id are the same for both points, False
+   otherwise.
 */
 /**************************************************************************/
 bool TS_Point::operator==(TS_Point p1) {
@@ -228,7 +229,8 @@ bool TS_Point::operator==(TS_Point p1) {
 /**************************************************************************/
 /*!
     @brief  Simple != comparator for two TS_Point objects
-    @returns False if x, y and z are the same for both points, True otherwise.
+    @returns False if x, y, z, and id are the same for both points, True
+   otherwise.
 */
 /**************************************************************************/
 bool TS_Point::operator!=(TS_Point p1) {
