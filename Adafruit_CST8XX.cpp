@@ -97,17 +97,17 @@ uint8_t Adafruit_CST8XX::touched(void) {
     @param  n The # index (0 or 1) to the points we can detect. In theory we can
    detect 2 points but we've found that you should only use this for
    single-touch since the two points cant share the same half of the screen.
-    @returns {@link TS_Point} object that has the x and y coordinets set. If the
-   z coordinate is 0 it means the point is not touched. If z is 1, it is
+    @returns {@link CST_TS_Point} object that has the x and y coordinets set. If
+   the z coordinate is 0 it means the point is not touched. If z is 1, it is
    currently touched.
 */
 /**************************************************************************/
-TS_Point Adafruit_CST8XX::getPoint(uint8_t n) {
+CST_TS_Point Adafruit_CST8XX::getPoint(uint8_t n) {
   readData();
   if ((touches == 0) || (n > 1)) {
-    return TS_Point(0, 0, 0);
+    return CST_TS_Point(0, 0, 0);
   } else {
-    return TS_Point(touchX[n], touchY[n], 1, touchID[n], event[n]);
+    return CST_TS_Point(touchX[n], touchY[n], 1, touchID[n], event[n]);
   }
 }
 
@@ -193,7 +193,7 @@ uint16_t Adafruit_CST8XX::readRegister16(uint8_t reg) {
     @brief  Instantiates a new CST8XX class with x, y and z set to 0 by default
 */
 /**************************************************************************/
-TS_Point::TS_Point(void) { x = y = z = 0; }
+CST_TS_Point::CST_TS_Point(void) { x = y = z = 0; }
 
 /**************************************************************************/
 /*!
@@ -206,8 +206,8 @@ TS_Point::TS_Point(void) { x = y = z = 0; }
 */
 /**************************************************************************/
 
-TS_Point::TS_Point(int16_t _x, int16_t _y, int16_t _z, uint8_t _id,
-                   enum Events _event) {
+CST_TS_Point::CST_TS_Point(int16_t _x, int16_t _y, int16_t _z, uint8_t _id,
+                           enum Events _event) {
   x = _x;
   y = _y;
   z = _z;
@@ -217,22 +217,22 @@ TS_Point::TS_Point(int16_t _x, int16_t _y, int16_t _z, uint8_t _id,
 
 /**************************************************************************/
 /*!
-    @brief  Simple == comparator for two TS_Point objects
+    @brief  Simple == comparator for two CST_TS_Point objects
     @returns True if x, y, z, and id are the same for both points, False
    otherwise.
 */
 /**************************************************************************/
-bool TS_Point::operator==(TS_Point p1) {
+bool CST_TS_Point::operator==(CST_TS_Point p1) {
   return ((p1.x == x) && (p1.y == y) && (p1.z == z) && (p1.id == id));
 }
 
 /**************************************************************************/
 /*!
-    @brief  Simple != comparator for two TS_Point objects
+    @brief  Simple != comparator for two CST_TS_Point objects
     @returns False if x, y, z, and id are the same for both points, True
    otherwise.
 */
 /**************************************************************************/
-bool TS_Point::operator!=(TS_Point p1) {
+bool CST_TS_Point::operator!=(CST_TS_Point p1) {
   return ((p1.x != x) || (p1.y != y) || (p1.z != z) || p1.id != id);
 }

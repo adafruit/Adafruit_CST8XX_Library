@@ -59,14 +59,14 @@ const char *const events_name[] = {"PRESS", "RELEASE", "TOUCHING",
    coordinates, for easy math/comparison
 */
 /**************************************************************************/
-class TS_Point {
+class CST_TS_Point {
 public:
-  TS_Point(void);
-  TS_Point(int16_t x, int16_t y, int16_t z, uint8_t id = 0,
-           enum Events event = NONE);
+  CST_TS_Point(void);
+  CST_TS_Point(int16_t x, int16_t y, int16_t z, uint8_t id = 0,
+               enum Events event = NONE);
 
-  bool operator==(TS_Point);
-  bool operator!=(TS_Point);
+  bool operator==(CST_TS_Point);
+  bool operator!=(CST_TS_Point);
 
   int16_t x; /*!< X coordinate */
   int16_t y; /*!< Y coordinate */
@@ -87,7 +87,7 @@ public:
   Adafruit_CST8XX(void);
   bool begin(TwoWire *theWire = &Wire, uint8_t i2c_addr = CST8XX_DEFAULT_ADDR);
   uint8_t touched(void);
-  TS_Point getPoint(uint8_t n = 0);
+  CST_TS_Point getPoint(uint8_t n = 0);
 
   // void autoCalibrate(void);
 
