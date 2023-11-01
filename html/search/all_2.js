@@ -21,5 +21,6 @@ var searchData=
   ['cst8xx_5freg_5fprojid',['CST8XX_REG_PROJID',['../_adafruit___c_s_t8_x_x_8h.html#a060d153949c030bbfadf3114d6b332ac',1,'Adafruit_CST8XX.h']]],
   ['cst8xx_5freg_5fsleep',['CST8XX_REG_SLEEP',['../_adafruit___c_s_t8_x_x_8h.html#a7f5daaa0b82cf18abcde78d8a875f1bc',1,'Adafruit_CST8XX.h']]],
   ['cst8xx_5freg_5ftouchdata',['CST8XX_REG_TOUCHDATA',['../_adafruit___c_s_t8_x_x_8h.html#aaa2f5dcec478f50239ef3375e61dcb81',1,'Adafruit_CST8XX.h']]],
-  ['cst8xx_5fworkmode',['CST8XX_WORKMODE',['../_adafruit___c_s_t8_x_x_8h.html#a31d61f05d7648f462da5f88a08982988',1,'Adafruit_CST8XX.h']]]
+  ['cst8xx_5fworkmode',['CST8XX_WORKMODE',['../_adafruit___c_s_t8_x_x_8h.html#a31d61f05d7648f462da5f88a08982988',1,'Adafruit_CST8XX.h']]],
+  ['cst_5fts_5fpoint',['CST_TS_Point',['../class_c_s_t___t_s___point.html',1,'CST_TS_Point'],['../class_c_s_t___t_s___point.html#a79b3fce9382a1f8cd11c691e84497a1f',1,'CST_TS_Point::CST_TS_Point(void)'],['../class_c_s_t___t_s___point.html#a4f5ca855ba8c9133325af3221acdd8ca',1,'CST_TS_Point::CST_TS_Point(int16_t x, int16_t y, int16_t z, uint8_t id=0, enum Events event=NONE)']]]
 ];
